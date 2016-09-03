@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import { ListView } from 'react-native'
+import { ListView, View } from 'react-native'
 import Space from './Space'
+import styles from '../styles/SpaceList'
 
 class SpaceList extends Component {
   render() {
@@ -11,6 +12,7 @@ class SpaceList extends Component {
         dataSource={ dataSource }
         renderRow={ this.renderSpace }
         removeClippedSubviews={ true }
+        enableEmptySections={ true }
         pageSize={ 10 }
         />
     )

@@ -6,8 +6,6 @@ import { Provider } from 'react-redux'
 import configureStore from '../config/store'
 import { Scene, Router } from 'react-native-router-flux'
 import styles from '../styles/App'
-
-import SpaceListContainer from './SpaceListContainer'
 import TabBar from '../components/TabBar'
 
 const store = configureStore()
@@ -19,8 +17,7 @@ export default class App extends Component {
         <View style={ styles.container }>
           <Router>
             <Scene key='root'>
-              <Scene key='drawer' component={ TabBar } title={ 'Awesome Project' }>
-              </Scene>
+              <Scene key='drawer' component={ TabBar } title={ 'Awesome Project' } />
             </Scene>
           </Router>
         </View>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ListView } from 'react-native'
+import { ListView, View } from 'react-native'
 import { connect } from 'react-redux'
 import SpaceList from '../components/SpaceList'
 import { getSpaces } from '../actions/SpaceActions'

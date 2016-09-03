@@ -4,7 +4,7 @@ import styles from '../styles/TabBar'
 import { tabItemClicked } from '../actions/TabItemActions'
 import { connect } from 'react-redux'
 
-const TabBarItem = ({ selected, dispatch, title, icon, type }) => {
+const TabBarItem = ({ children, selected, dispatch, title, icon, type }) => {
   return(
     <TabBarIOS.Item
       title = { title }
@@ -14,6 +14,7 @@ const TabBarItem = ({ selected, dispatch, title, icon, type }) => {
         dispatch(tabItemClicked(type))
       }}>
       <View style={[ styles.tabContent, { backgroundColor: '#FFF' } ]}>
+        { children }
       </View>
     </TabBarIOS.Item>
   )
