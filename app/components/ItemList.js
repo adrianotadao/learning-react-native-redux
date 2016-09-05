@@ -1,17 +1,25 @@
 import React, { Component, PropTypes } from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableHighlight } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 import styles from '../styles/ItemList'
+import { connect } from 'react-redux'
 
 class ItemList extends Component {
   render() {
-    const { item } = this.props
+    const { dispatch, item } = this.props
 
     return (
-      <View style={ styles.wrapper }>
-        <Image style={ styles.thumb } source={{ uri: this.getThumb(item) }} />
-        <Text> { this.getLabel(item) } </Text>
-      </View>
+      <TouchableHighlight onPress={ () => { this.onPress(item) }}>
+        <View style={ styles.wrapper }>
+          <Image style={ styles.thumb } source={{ uri: this.getThumb(item) }} />
+          <Text> { this.getLabel(item) } </Text>
+        </View>
+      </TouchableHighlight>
     )
+  }
+
+  onPress(item) {
+    Actions.showItem({ item: item })
   }
 
   getThumb(item) {
@@ -31,5 +39,7 @@ class ItemList extends Component {
 //     name: PropTypes.string.isRequired
 //   }).isRequired
 // }
+
+ItemList = connect()(ItemList)
 
 export default ItemList

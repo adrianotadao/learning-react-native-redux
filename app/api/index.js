@@ -10,3 +10,8 @@ export function spacesRequest(callback) {
 export function feedRequest(callback) {
   setTimeout(() => callback(_feed), TIMEOUT)
 }
+
+export function getItem(itemId, callback) {
+  let item = _feed.find(item => item.id === itemId)
+  setTimeout(() => callback(item), TIMEOUT)
+}
