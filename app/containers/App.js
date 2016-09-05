@@ -10,18 +10,18 @@ import TabBar from '../components/TabBar'
 
 const store = configureStore()
 
-export default class App extends Component {
-  render() {
-    return (
-      <Provider store={ store }>
-        <View style={ styles.container }>
-          <Router>
-            <Scene key='root'>
-              <Scene key='drawer' component={ TabBar } title={ 'Awesome Project' } />
-            </Scene>
-          </Router>
-        </View>
-      </Provider>
-    )
-  }
+const App = () => {
+  return(
+    <Provider store={ store }>
+      <View style={ styles.container }>
+        <Router>
+          <Scene key='root'>
+            <Scene key='drawer' component={ TabBar } title={ 'Skore' } />
+          </Scene>
+        </Router>
+      </View>
+    </Provider>
+  )
 }
+
+export default App

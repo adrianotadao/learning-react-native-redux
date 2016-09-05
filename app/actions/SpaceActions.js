@@ -1,4 +1,4 @@
-import api from '../api/index'
+import { spacesRequest } from '../api/index'
 
 export function receiveSpaces(spaces) {
   return {
@@ -9,7 +9,7 @@ export function receiveSpaces(spaces) {
 
 export function getSpaces() {
   return (dispatch) => {
-    api.getSpaces((spaces) => {
+    spacesRequest((spaces) => {
       dispatch(receiveSpaces(spaces))
     })
   }

@@ -13,7 +13,7 @@ const TabBarItem = ({ children, selected, dispatch, title, icon, type }) => {
       onPress = { () => {
         dispatch(tabItemClicked(type))
       }}>
-      <View style={[ styles.tabContent, { backgroundColor: '#FFF' } ]}>
+      <View style={ styles.tabContent }>
         { children }
       </View>
     </TabBarIOS.Item>

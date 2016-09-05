@@ -1,16 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { ListView, View } from 'react-native'
-import Space from './Space'
-import styles from '../styles/SpaceList'
+import ItemList from './ItemList'
 
-class SpaceList extends Component {
+class ItemsList extends Component {
   render() {
     const { dataSource } = this.props
 
     return (
       <ListView
         dataSource={ dataSource }
-        renderRow={ this.renderSpace }
+        renderRow={ this.renderItemList }
         removeClippedSubviews={ true }
         enableEmptySections={ true }
         pageSize={ 10 }
@@ -18,15 +17,15 @@ class SpaceList extends Component {
     )
   }
 
-  renderSpace(space) {
+  renderItemList(space) {
     return(
-      <Space key={ space.id } space={ space } />
+      <ItemList key={ space.id } space={ space } />
     )
   }
 }
 
-SpaceList.propTypes = {
+ItemsList.propTypes = {
   dataSource: PropTypes.object.isRequired
 }
 
-export default SpaceList
+export default ItemsList

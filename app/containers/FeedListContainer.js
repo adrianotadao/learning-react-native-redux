@@ -2,29 +2,29 @@ import React, { Component } from 'react'
 import { ListView, View } from 'react-native'
 import { connect } from 'react-redux'
 import ItemsList from '../components/ItemsList'
-import { getSpaces } from '../actions/SpaceActions'
+import { getFeed } from '../actions/FeedActions'
 
-class SpaceListContainer extends Component {
+class FeedListContainer extends Component {
   componentDidMount() {
     const { dispatch } = this.props
-    dispatch(getSpaces())
+    dispatch(getFeed())
   }
 
   render() {
-    const { spaces } = this.props
+    const { links } = this.props
     return(
       <ItemsList
-        dataSource={ this.dataSource(spaces) }
+        dataSource={ this.dataSource(links) }
         />
     )
   }
 
-  dataSource(spaces) {
+  dataSource(links) {
     let ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     })
-    return ds.cloneWithRows(spaces)
+    return ds.cloneWithRows(links)
   }
 }
 
-export default connect((state) => state.Spaces)(SpaceListContainer)
+export default connect((state) => state.Feed)(FeedListContainer)

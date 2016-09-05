@@ -2,7 +2,7 @@ const defaultState = {
   selected: 'feed'
 }
 
-const TabItem = (state = {}, action) => {
+const TabItem = (state = defaultState, action) => {
   switch (action.type) {
     case 'TAB_ITEM_FEED':
       return { ...state, selected: 'feed' }
