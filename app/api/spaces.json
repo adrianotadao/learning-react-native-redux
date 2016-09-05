@@ -38,29 +38,5 @@
     "created_at":"2016-03-23T10:38:59.560-03:00",
     "updated_at":"2016-03-23T14:54:17.582-03:00",
     "default":false
-  },
-  {
-    "id":7,
-    "name":"Fun",
-    "position":7,
-    "created_at":"2016-03-23T10:38:59.560-03:00",
-    "updated_at":"2016-03-23T14:54:17.582-03:00",
-    "default":false
-  },
-  {
-    "id":7,
-    "name":"Fun",
-    "position":7,
-    "created_at":"2016-03-23T10:38:59.560-03:00",
-    "updated_at":"2016-03-23T14:54:17.582-03:00",
-    "default":false
-  },
-  {
-    "id":7,
-    "name":"Fun",
-    "position":7,
-    "created_at":"2016-03-23T10:38:59.560-03:00",
-    "updated_at":"2016-03-23T14:54:17.582-03:00",
-    "default":false
   }
 ]
