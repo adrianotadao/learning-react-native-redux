@@ -27,4 +27,13 @@ class Link extends Component {
   }
 }
 
+Link.propTypes = {
+  link: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  })
+}
+
 export default Link
