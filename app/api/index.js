@@ -11,7 +11,7 @@ export function feedRequest(callback) {
   setTimeout(() => callback(_feed), TIMEOUT)
 }
 
-export function getItem(itemId, callback) {
-  let item = _feed.find(item => item.id === itemId)
-  setTimeout(() => callback(item), TIMEOUT)
+export function getLink(linkId, callback) {
+  let link = _feed.find(link => link.id === linkId)
+  setTimeout(() => callback(link), TIMEOUT)
 }

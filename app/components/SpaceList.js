@@ -1,30 +1,30 @@
 import React, { Component, PropTypes } from 'react'
 import { ListView, View } from 'react-native'
-import Link from './Link'
+import Space from './Space'
 
-class LinksList extends Component {
+class SpaceList extends Component {
   render() {
     const { dataSource } = this.props
 
     return (
       <ListView
         dataSource={ dataSource }
-        renderRow={ this.renderLink }
+        renderRow={ this.renderSpace }
         removeClippedSubviews={ true }
         enableEmptySections={ true }
         />
     )
   }
 
-  renderLink(link) {
-    return(
-      <Link key={ link.id } link={ link } />
+  renderSpace(space) {
+    return (
+      <Space key={ space.id } space={ space } />
     )
   }
 }
 
-LinksList.propTypes = {
+SpaceList.propTypes = {
   dataSource: PropTypes.object.isRequired
 }
 
-export default LinksList
+export default SpaceList

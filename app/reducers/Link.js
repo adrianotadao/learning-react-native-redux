@@ -5,7 +5,7 @@ let defaultState = {
 const Link = (state = defaultState, action) => {
   switch (action.type) {
     case 'SHOW_ITEM':
-      return { ...state, item: action.item }
+      return { ...state, link: action.link }
     default:
       return state
   }

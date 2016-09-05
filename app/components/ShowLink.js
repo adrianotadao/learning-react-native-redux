@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import { WebView } from 'react-native'
 
-class ShowItem extends Component {
+class ShowLink extends Component {
   render() {
-    const { item } = this.props
+    const { link } = this.props
 
-    console.log(item)
+    console.log(link)
 
     return (
       <WebView
         automaticallyAdjustContentInsets={ true }
         startInLoadingState={ true }
-        source={{ uri: item.url }}
+        source={{ uri: link.url }}
         />
     )
   }
 }
 
-export default ShowItem
+export default ShowLink
