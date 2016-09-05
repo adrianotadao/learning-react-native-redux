@@ -2,7 +2,7 @@ let defaultState = {
   link: {}
 }
 
-const ItemList = (state = defaultState, action) => {
+const Link = (state = defaultState, action) => {
   switch (action.type) {
     case 'SHOW_ITEM':
       return { ...state, item: action.item }
@@ -11,4 +11,4 @@ const ItemList = (state = defaultState, action) => {
   }
 }
 
-export default ItemList
+export default Link

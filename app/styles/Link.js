@@ -1,6 +1,6 @@
 import React, { StyleSheet } from 'react-native'
 
-const ItemList = StyleSheet.create({
+const Link = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     padding: 5,
@@ -13,4 +13,4 @@ const ItemList = StyleSheet.create({
   }
 })
 
-export default ItemList
+export default Link

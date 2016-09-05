@@ -2,13 +2,13 @@ import { combineReducers } from 'redux'
 import Spaces from './Spaces'
 import TabItem from './TabItem'
 import Feed from './Feed'
-import ItemList from './ItemList'
+import Link from './Link'
 
 const rootReducer = combineReducers({
   Spaces,
   TabItem,
   Feed,
-  ItemList
+  Link
 })
 
 export default rootReducer

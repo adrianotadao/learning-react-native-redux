@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ListView, View } from 'react-native'
 import { connect } from 'react-redux'
-import ItemsList from '../components/ItemsList'
+import LinksList from '../components/LinksList'
 import { getFeed } from '../actions/FeedActions'
 
 class FeedListContainer extends Component {
@@ -13,7 +13,7 @@ class FeedListContainer extends Component {
   render() {
     const { links } = this.props
     return(
-      <ItemsList
+      <LinksList
         dataSource={ this.dataSource(links) }
         />
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ListView, View } from 'react-native'
 import { connect } from 'react-redux'
-import ItemsList from '../components/ItemsList'
+import LinksList from '../components/LinksList'
 import { getSpaces } from '../actions/SpaceActions'
 
 class SpaceListContainer extends Component {
@@ -13,7 +13,7 @@ class SpaceListContainer extends Component {
   render() {
     const { spaces } = this.props
     return(
-      <ItemsList
+      <LinksList
         dataSource={ this.dataSource(spaces) }
         />
     )

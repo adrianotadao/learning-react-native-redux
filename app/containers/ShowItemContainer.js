@@ -14,4 +14,4 @@ class ShowItemContainer extends Component {
   }
 }
 
-export default connect(state => state.ItemList)(ShowItemContainer)
+export default connect(state => state.Link)(ShowItemContainer)

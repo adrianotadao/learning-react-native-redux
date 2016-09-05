@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { ListView, View } from 'react-native'
-import ItemList from './ItemList'
+import Link from './Link'
 
-class ItemsList extends Component {
+class LinksList extends Component {
   render() {
     const { dataSource } = this.props
 
     return (
       <ListView
         dataSource={ dataSource }
-        renderRow={ this.renderItemList }
+        renderRow={ this.renderLink }
         removeClippedSubviews={ true }
         enableEmptySections={ true }
         pageSize={ 10 }
@@ -17,15 +17,15 @@ class ItemsList extends Component {
     )
   }
 
-  renderItemList(item) {
+  renderLink(item) {
     return(
-      <ItemList key={ item.id } item={ item } />
+      <Link key={ item.id } item={ item } />
     )
   }
 }
 
-ItemsList.propTypes = {
+LinksList.propTypes = {
   dataSource: PropTypes.object.isRequired
 }
 
-export default ItemsList
+export default LinksList

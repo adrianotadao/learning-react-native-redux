@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { View, Text, Image, TouchableHighlight } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import styles from '../styles/ItemList'
+import styles from '../styles/Link'
 import { connect } from 'react-redux'
 
-class ItemList extends Component {
+class Link extends Component {
   render() {
     const { dispatch, item } = this.props
 
@@ -34,12 +34,12 @@ class ItemList extends Component {
   }
 }
 
-// ItemList.propTypes = {
+// Link.propTypes = {
 //   item: PropTypes.shape({
 //     name: PropTypes.string.isRequired
 //   }).isRequired
 // }
 
-ItemList = connect()(ItemList)
+Link = connect()(Link)
 
-export default ItemList
+export default Link
