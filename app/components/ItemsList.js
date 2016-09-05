@@ -17,9 +17,9 @@ class ItemsList extends Component {
     )
   }
 
-  renderItemList(space) {
+  renderItemList(item) {
     return(
-      <ItemList key={ space.id } space={ space } />
+      <ItemList key={ item.id } item={ item } />
     )
   }
 }
